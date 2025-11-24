@@ -1,13 +1,13 @@
 /* ========== RESET & VARIABLES ========== */
 :root {
-    /* Colors - Earthy & Natural Palette */
-    --primary: #7c5430;           /* Warm brown */
-    --primary-dark: #5a3d1f;      /* Darker brown */
-    --primary-light: #9a6e47;     /* Light brown */
-    --secondary: #e8a951;         /* Golden/hay color */
-    --secondary-dark: #c88f3d;    /* Darker gold */
-    --accent: #228b22;            /* Forest green */
-    --accent-light: #3ba33b;      /* Light green */
+    /* Colors driven by the editor */
+    --primary: #343A40;
+    --primary-dark: color-mix(in srgb, #343A40 80%, black);
+    --primary-light: color-mix(in srgb, #343A40 80%, white);
+    --secondary: #7C6A0A;
+    --secondary-dark: color-mix(in srgb, #7C6A0A 80%, black);
+    --accent: #E0AC69;
+    --accent-light: color-mix(in srgb, #E0AC69 70%, white);
     
     /* Neutrals */
     --white: #ffffff;
@@ -329,6 +329,45 @@ body {
     flex-wrap: wrap;
 }
 
+.hero-meta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.hero-meta li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1.25rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    min-width: 220px;
+}
+
+.hero-meta i {
+    font-size: 1.2rem;
+}
+
+.hero-meta span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+}
+
+.hero-meta strong {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -412,6 +451,47 @@ section {
     gap: 4rem;
     align-items: center;
 }
+
+    .about-meta {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .about-meta__item {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 16px;
+        background: var(--gray-50);
+        border: 1px solid var(--gray-100);
+    }
+
+    .about-meta__item i {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--primary);
+        color: var(--white);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .about-meta__item span {
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--gray-500);
+    }
+
+    .about-meta__item strong {
+        font-size: 1rem;
+        color: var(--gray-900);
+    }
 
 .about-media {
     position: relative;
